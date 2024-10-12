@@ -215,6 +215,15 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
         if (SystemProperties.getBoolean("persist.sys.settings.revamp_ui", false)) {
+            iteratePreferences(preference -> {
+                if (Flags.homepageRevamp()) {
+                    String prefKey = preference.getKey();
+                    if (prefKey.equals("top_level_wellbeing")) {
+                        preference.setVisible(false);
+                    }
+                    return;
+                }
+            });
             return;
         }
         final PreferenceScreen screen = getPreferenceScreen();
