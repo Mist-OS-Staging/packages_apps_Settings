@@ -21,11 +21,12 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
+    <!-- Mist logo -->
     <com.android.settingslib.widget.LayoutPreference
-        android:key="my_device_info_header"
-        android:order="-1"
-        android:layout="@layout/settings_entity_header"
-        android:selectable="false"/>
+        android:layout="@layout/mist_logo"
+        android:key="mist_logo"
+        android:order="-999"
+        android:selectable="false" />
 
     <PreferenceCategory
         android:key="basic_info_category"
