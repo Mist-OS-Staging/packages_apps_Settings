@@ -58,6 +58,7 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        "res-mist/**/*.java",
         "crDroidSettings/src/**/*.java",
         "crDroidSettings/src/**/*.kt",
     ],
@@ -70,6 +71,7 @@ android_library {
 
     resource_dirs: [
         "res",
+        "res-mist",
         "res-export", // for external usage
         "res-product",
         "crDroidSettings/res",

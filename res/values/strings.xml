@@ -13918,4 +13918,12 @@
     <string name="search_gesture_feature_title">Circle to Search</string>
     <!-- Summary text for press and hold nav handle OR home button to invoke Circle to Search. [CHAR LIMIT=NONE] -->
     <string name="search_gesture_feature_summary">Touch and hold the Home button or the navigation handle to search using the content on your screen.</string>
+
+    <!-- Dashboard categories -->
+    <string name="top_level_connectivity">Connectivity</string>
+    <string name="top_level_mistify">Mistify</string>
+    <string name="top_level_personalize">Personalize</string>
+    <string name="top_level_security" translatable="false">Security</string>
+    <string name="top_level_system">System</string>
+    <string name="top_level_info">Information</string>
 </resources>
