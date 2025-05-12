@@ -45,8 +45,9 @@ public class LineageVersionDetailPreferenceController extends BasePreferenceCont
     private static final String KEY_LINEAGE_VERSION_PROP = "ro.modversion";
     private static final String KEY_MIST_BUILD_VERSION_PROP = "ro.modversion";
     private static final String KEY_MIST_DEVICE_PROP = "ro.mist.device";
-    private static final String KEY_MIST_RELEASE_TYPE_PROP = "ro.mist.build.variant";
+    private static final String KEY_MIST_RELEASE_TYPE_PROP = "ro.mist.release.type";
     private static final String KEY_MIST_RELEASE_VERSION_PROP = "ro.mist.display.version";
+    private static final String KEY_MIST_VARIANT_PROP = "ro.mist.build.variant";
 
     private static final String PLATLOGO_PACKAGE_NAME = "com.android.egg";
     private static final String PLATLOGO_ACTIVITY_CLASS =
@@ -127,11 +128,11 @@ public class LineageVersionDetailPreferenceController extends BasePreferenceCont
     private String shortRomVersion() {
         String romVersion = SystemProperties.get(KEY_MIST_BUILD_VERSION_PROP,
                 this.mContext.getString(R.string.device_info_default));
-        String deviceCodename = SystemProperties.get(KEY_MIST_DEVICE_PROP,
-                this.mContext.getString(R.string.device_info_default));
         String romReleasetype = SystemProperties.get(KEY_MIST_RELEASE_TYPE_PROP,
                 this.mContext.getString(R.string.device_info_default));
-        String shortVersion = romVersion + " | " + deviceCodename + " | " + romReleasetype;
+        String romVariant = SystemProperties.get(KEY_MIST_VARIANT_PROP,
+                this.mContext.getString(R.string.device_info_default));
+        String shortVersion = romVersion + " | " + romReleasetype + " | " + romVariant;
         return shortVersion;
     }
 
